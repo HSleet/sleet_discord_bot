@@ -1,8 +1,8 @@
 import os
-import asyncio
 from bot_functions import server_management
 from discord.ext import commands
 from discord.ext.commands import has_permissions
+
 bot_token = os.getenv("BOT_TOKEN")
 
 bot = commands.Bot(command_prefix="!")
@@ -25,8 +25,17 @@ async def unmuteall(ctx):
 
 
 @bot.command()
+async def pollo(ctx):
+    la_habitacion_del_pollo = 764124563667681330
+    dst_channel = bot.get_channel(la_habitacion_del_pollo)
+    await ctx.message.delete()
+    await server_management.move_author_to_channel(ctx, dst_channel)
+
+
+@bot.command()
 async def join(ctx):
     channel = ctx.author.voice.channel
+    await ctx.message.delete()
     await channel.connect()
 
 
