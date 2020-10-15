@@ -33,6 +33,11 @@ async def salon(ctx):
 
 
 @bot.command()
+async def Salon(ctx):
+    await salon(ctx)
+
+
+@bot.command()
 async def join(ctx):
     channel = ctx.author.voice.channel
     await ctx.message.delete()
