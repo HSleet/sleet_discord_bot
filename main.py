@@ -25,7 +25,7 @@ async def unmuteall(ctx):
 
 
 @bot.command()
-async def pollo(ctx):
+async def salon(ctx):
     la_habitacion_del_pollo = 764124563667681330
     dst_channel = bot.get_channel(la_habitacion_del_pollo)
     await ctx.message.delete()
