@@ -36,6 +36,10 @@ async def salon(ctx):
 async def Salon(ctx):
     await salon(ctx)
 
+@bot.command()
+async def pollo(ctx):
+    await bot.message.send("In 5 seconds you will be disconnected from the server :) ")
+
 
 @bot.command()
 async def join(ctx):
