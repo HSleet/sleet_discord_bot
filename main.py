@@ -38,7 +38,7 @@ async def Salon(ctx):
 
 @bot.command()
 async def pollo(ctx):
-    await bot.message.send("In 5 seconds you will be disconnected from the server :) ")
+    await ctx.channel.send("mmg")
 
 
 @bot.command()
